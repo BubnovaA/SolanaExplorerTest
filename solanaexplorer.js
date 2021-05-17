@@ -29,8 +29,7 @@ class App extends React.Component {
 
         solanaTransactions.slice(start, start + this.pageCount)
             .map(value => {
-                console.log(value);
-                value.blockTime = moment(value.blockTime * 1000).format("DD-MM-YYYY HH:mm:ss");
+                 value.blockTime = moment(value.blockTime * 1000).format("DD-MM-YYYY HH:mm:ss");
                 (value.err === null || value.err === "success") ? value.err = "success" : value.err = "failed";
                 let transactionDetail = connectionsol.getParsedConfirmedTransaction(value.signature);
                 transactionDetail.then(
