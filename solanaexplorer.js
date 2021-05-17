@@ -24,7 +24,7 @@ class App extends React.Component {
 
 
     /* Fetch parsed transaction details for a batch of confirmed transactions */
-    /*  required  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js"></script>/*
+    /*  required  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js"></script> */
     getDetailsTransactions(solanaTransactions, start) {
 
         solanaTransactions.slice(start, start + this.pageCount)
